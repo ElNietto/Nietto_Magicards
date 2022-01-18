@@ -3,3 +3,133 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    background-image: url(.img/bg1.png);
+
+}
+
+
+.contenedor{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    perspective: 350px;
+    margin: auto;
+
+
+}
+
+ .tarjeta{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d ;
+        overflow: hidden;
+    }
+
+/*-----------hovers*/
+
+    .tarjeta:hover .lado-A{
+        transform: rotateY(540deg);
+
+    }
+
+    .tarjeta:hover .lado-B{
+        transform: rotateY(360deg);
+
+    }
+
+
+
+    [class*="lado"]{
+        width: 15rem;
+        height: 12rem;
+        border-radius: 1rem;
+        padding: 1rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        transition: transform 1s;
+        overflow: hidden;
+
+
+    }
+
+    .lado-A{
+        display: flex;
+        margin: auto;
+        background-image: url(.img/bgc.png);
+    }
+
+
+    .lado-A h2{
+        font-size: xx-large;
+        color: aliceblue;
+
+    }
+
+        
+
+
+    .lado-B{
+        transform: rotateY(180deg);
+        transition: 1s;
+    }
+
+    
+
+/*-----------al niño le encanta mezclar mejungues XD*/
+
+
+[class*="T"]{
+    width: 15rem;
+    height: 12rem;
+
+}
+
+.T1{
+    transform: translateZ(-100px) scale(1);
+    z-index: 1;
+    margin-top: 40%; 
+    margin-left: -40%;
+}
+
+
+.T2{
+    transform: translateZ(-400px) scale(1);
+    z-index: 2;
+    margin-top: -30%; 
+    margin-right: 10%; 
+}
+
+ 
+.T3{
+    transform: translateZ(20px) scale(1);
+    z-index: 3;
+    margin-top: 10%;  
+
+}
+
+.T4{
+    transform: translateZ(-20px) scale(1);
+    z-index: 2;
+    margin-top: -30%;  
+
+}
+
+.T5{
+    transform: translateZ(-30px) scale(1);
+    z-index: 1;
+    margin-top: 40%;  
+    margin-right: -40%;
+
+}
+
+/*------------FONDOS B*/
+
+[class*="B"] img{
+    max-height: 100%;
+    border-radius: 1rem;
+}
