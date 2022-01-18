@@ -14,7 +14,7 @@ body{
     display: flex;
 	justify-content: center;
 	align-items: center;
-    perspective: 350px;
+    perspective: 150px;
     margin: auto;
 
 
